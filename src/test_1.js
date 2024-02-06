@@ -13,7 +13,7 @@
 //     break;
 // }
 
-// // while loop
+// while loop
 // let i = 5
 // while(i < 10){
 //   console.log(i)
@@ -21,11 +21,11 @@
 // }
 
 
-// // comment
+// comment
 
-// /* commnet
-// is continued
-// */
+/* commnet
+is continued
+*/
 
 // // solution to step
 
@@ -50,7 +50,7 @@
 // // exponent
 // console.log(10 ** 3)
 
-// // ++ --
+// ++ --
 // A+= 5 // A = A + 5
 // A-=3  // A = A - 3
 
@@ -58,6 +58,14 @@
 // A = true
 // // mutable
 // // immutable
+
+// var variable
+// let a = [10, 11, 12, 13];
+// a = [10, 11, 12, 13];
+// a[2] = 2
+
+// let a = 4
+// let b = a
 
 // // mutable
 // let arr = [10];
@@ -94,10 +102,16 @@
 // console.log(I instanceof String) //  true
 // console.log(H instanceof String) // false
 
+// false, 0, "", undefined, null
+// let a, b
+
+// let result = (a < b) ? a+b : a-b
+
 
 // let a = 10
 // console.log(a);
 // // console.log(b, "first inst");
+
 // let b = 5
 // console.log(fun(a,b))
 // console.log(b, "second inst");
@@ -107,6 +121,7 @@
 // }
 
 // const fun1 = (a,b) => a+b
+// let sum = fun1(2,3)
 
 
 
@@ -126,8 +141,12 @@
 // console.log(arr1)
 
 const numberArray = [1, 3, 5, 6, 8, 9, 10, 11, 15, 20]
+let sum = 0
+let sumTotal = (i) => sum+= i
 
-const fruitsArray = ['apple', 'mango', 'papaya', 'chiku']
+let newArray = numberArray.map(sumTotal)
+
+const fruitsArray = ['apple', 'chiku', 'mango', 'papaya']
 let str = 'apple'
 
 
