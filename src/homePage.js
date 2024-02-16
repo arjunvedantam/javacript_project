@@ -34,7 +34,7 @@ export function HomePage(props){
     <>
       <div>
         <center>
-          <h1>{"Home Needs Supermarket"}</h1>
+          <h1>{"Home Needs Supermarket "}</h1>
           <h3> {"One stop shop for all your needs"} </h3>
         </center>
       </div>
