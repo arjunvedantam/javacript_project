@@ -3,7 +3,7 @@ import React from "react";
 export function Card(props){
 
   return (
-    <div style={{border: "solid 2px black", maxHeight: '500px', maxWidth: "500px"}}>
+    <div style={{border: "solid 2px black", maxHeight: '500px', maxWidth: "500px"}} onClick={() => props.onClickProduct(props.id)}>
       <div>
         <img alt="product" height="150px" src={ props.images[0] } id="productCardImage"/>
       </div>

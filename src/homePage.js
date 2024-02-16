@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "./productCard";
 import axios from 'axios';
+import { ProductPage } from "./productPage";
 
 export function HomePage(props){
   const [productsList, setProductsList] = useState([])
+  const [selectedProduct, setSelectedProduct] = useState(null)
+  const [selectedProductId, setSelectedProductId] = useState(0);
 
   useEffect(()=>{
     axios.get('https://dummyjson.com/products')
@@ -17,6 +20,16 @@ export function HomePage(props){
     })
   },[])
 
+  useEffect(()=>{
+    if (selectedProductId !== 0) {
+      axios.get(`https://dummyjson.com/products/${selectedProductId}`)
+      .then((res) => {
+        console.log(res);
+        setSelectedProduct(res.data);
+      })
+    }
+  }, [selectedProductId])
+
   return (
     <>
       <div>
@@ -27,13 +40,17 @@ export function HomePage(props){
       </div>
 
       <div>
-        <h2>{"Products for sale"} </h2>
-        {productsList.map((productObject, i) => {
+        <h2> HomePage </h2>
+        {selectedProductId}
+        <h2>Products for sale </h2>
+        {productsList.map((productObject) => {
           return <Card
             {...productObject}
-            key={i}
+            key={productObject.id}
+            onClickProduct = {setSelectedProductId}
           />
         })}
+        {selectedProduct && <ProductPage {...selectedProduct}/>}
       </div>
 
     </>
