@@ -8,7 +8,7 @@ export const ProductPage = (props) => {
       Product Page
       <div className="row">
         <div>
-          <img height={"500px"} src={props?.images[0]}/>
+          <img height={"150px"} src={props?.images[0]}/>
         </div>
         <div>
           <div><h3>{props.title}</h3></div>

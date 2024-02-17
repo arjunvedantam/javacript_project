@@ -9,7 +9,7 @@ export function HomePage(props){
   const [selectedProductId, setSelectedProductId] = useState(0);
 
   useEffect(()=>{
-    axios.get('https://dummyjson.com/products')
+    axios.get('https://dummyjson.com/products?limit=10')
     .then((response) => {
       console.log(response)
       setProductsList(response.data.products)
@@ -50,7 +50,7 @@ export function HomePage(props){
             onClickProduct = {setSelectedProductId}
           />
         })}
-        {selectedProduct && <ProductPage {...selectedProduct}/>}
+        {/* {selectedProduct && <ProductPage {...selectedProduct}/>} */}
       </div>
 
     </>

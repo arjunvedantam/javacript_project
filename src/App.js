@@ -1,7 +1,11 @@
 import React from 'react';
 import './App.css';
-import { MyForm, Mybutton, Mytable } from './inputForm';
+// import { MyForm, Mybutton, Mytable } from './inputForm';
 import { HomePage } from './homePage';
+// import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { ProductPage } from './productPage';
+import { Cart } from './userCart';
+
 class App extends React.Component {
 
   // callbackFunction(name) {
@@ -29,9 +33,14 @@ class App extends React.Component {
   render() {
 
     return <>
-      {/* <MyForm submitFunction={this.callbackFunction} type="props" movieList={["Eagle", "Hanuman"]}/> */}
-      {/* <h2>Hi, I am a Car!</h2> */}
+      {/* <BrowserRouter>
+        <Routes>
+          <Route path='/productPage/:productId' Component={<ProductPage />} />
+          <Route path='*' Component={<HomePage />} />
+        </Routes>
+      </BrowserRouter> */}
       <HomePage />
+      <Cart />
     </>
   }
 }
