@@ -2,11 +2,24 @@ import React from 'react';
 import './App.css';
 // import { MyForm, Mybutton, Mytable } from './inputForm';
 import { HomePage } from './homePage';
-// import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ProductPage } from './productPage';
 import { Cart } from './userCart';
 
-class App extends React.Component {
+  function App(){
+
+    return (<>
+      {/* <BrowserRouter>
+        <Routes>
+          <Route path='/productPage/:productId' Component={<ProductPage />} />
+          <Route path='*' Component={<HomePage />} />
+        </Routes>
+      </BrowserRouter> */}
+      <HomePage />
+
+      <Cart />
+    </>)
+  }
 
   // callbackFunction(name) {
 
@@ -30,19 +43,10 @@ class App extends React.Component {
   // }
 
 
-  render() {
+  // render() {
 
-    return <>
-      {/* <BrowserRouter>
-        <Routes>
-          <Route path='/productPage/:productId' Component={<ProductPage />} />
-          <Route path='*' Component={<HomePage />} />
-        </Routes>
-      </BrowserRouter> */}
-      <HomePage />
-      <Cart />
-    </>
-  }
-}
+
+  // }
+// }
 
 export default App;

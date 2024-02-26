@@ -7,9 +7,9 @@ export const CartItem = (props) => {
       <div><img src={props.thumbnail} height={"25px"} alt=''/></div>
       <span> {props.title} </span><br />
       price: {props.price} <br />
-      quantity: {props.quantity} <button> + </button>
-      <button> Delete </button>
-      <button> - </button>
+      quantity: {props.quantity} <button onClick={() => props.updateCart(props.id, props.quantity+1)}> + </button>
+      <button onClick={() => props.updateCart(props.id, 0)}> Delete </button>
+      <button onClick={() => props.updateCart(props.id, props.quantity-1)}> - </button>
     </div>
   )
 }

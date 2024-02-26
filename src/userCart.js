@@ -6,16 +6,42 @@ export const Cart = () => {
   const [cartItems, setCartItems] = useState([])
 
   useEffect(() => {
-    axios.get('https://dummyjson.com/carts/user/1')
-    .then((res) => {
-      console.log(res?.data?.carts[0])
-      setCartItems(res?.data?.carts[0])
-    })
+    // const fetchCart = setInterval(() => {
+      axios.get('https://dummyjson.com/carts/user/97')
+      .then((res) => {
+        console.log(res?.data?.carts[0])
+        setCartItems(res?.data?.carts[0])
+      })
+    // }, 5000)
+
+    // return () => clearInterval(fetchCart)
+
   }, [])
+
+  const updateCart = (id, quantity) => {
+    const updateCartPayload = JSON.stringify({
+      merge: true, // this will include existing products in the cart
+      products: [
+        {
+          id,
+          quantity,
+        },
+      ]
+    })
+    axios.put('https://dummyjson.com/carts/1', updateCartPayload).then((res) => {
+      console.log(res.data, res.status);
+    })
+  }
 
   return (
     <>
-      {cartItems?.products?.map((props) => <CartItem {...props}/>)}
+      {cartItems?.products?.map((props) => {
+        const properties = {
+          ...props,
+          updateCart
+        }
+        return <CartItem {...properties} key={props.id}/>
+      })}
     </>
   )
 

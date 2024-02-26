@@ -50,7 +50,7 @@ export function HomePage(props){
             onClickProduct = {setSelectedProductId}
           />
         })}
-        {/* {selectedProduct && <ProductPage {...selectedProduct}/>} */}
+        {selectedProduct && <ProductPage {...selectedProduct}/>}
       </div>
 
     </>
