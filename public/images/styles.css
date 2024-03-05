@@ -1,0 +1,26 @@
+img {
+  height: 350px;
+}
+
+div h2 {
+  color: brown;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+h1 {
+  color: chocolate;
+}
+
+.styledElement {
+  color: chartreuse;
+}
+
+#spanId {
+  color: aqua;
+}
+
+span {
+  color: blueviolet;
+}
