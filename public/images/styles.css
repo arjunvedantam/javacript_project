@@ -1,3 +1,8 @@
+* {
+  font-size: larger;
+  color: blueviolet;
+}
+
 img {
   height: 350px;
 }
@@ -6,6 +11,18 @@ div h2 {
   color: brown;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+div.styledElement {
+  background-color: yellow;
+}
+
+div,.styledElement {
+  background-color: red;
+}
+
+/* * {
+  font-size: larger;
+} */
 
 
 
@@ -24,3 +41,9 @@ h1 {
 span {
   color: blueviolet;
 }
+
+* {
+  font-size: larger;
+  color: blueviolet;
+}
+
