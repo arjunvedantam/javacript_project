@@ -1,4 +1,4 @@
-* {
+/* * {
   font-size: larger;
   color: blueviolet;
 }
@@ -20,9 +20,9 @@ div,.styledElement {
   background-color: red;
 }
 
-/* * {
+* {
   font-size: larger;
-} */
+}
 
 
 
@@ -31,7 +31,7 @@ h1 {
 }
 
 .styledElement {
-  color: chartreuse;
+  color: chartreuse !important;
 }
 
 #spanId {
@@ -45,5 +45,11 @@ span {
 * {
   font-size: larger;
   color: blueviolet;
+} */
+
+.padding-10 {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid black;
 }
 
